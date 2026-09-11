@@ -35,7 +35,7 @@ class TargetProgress extends StatelessWidget {
           children: [
             Container(
               height: 12,
-              width: MediaQuery.of(context).size.width * 0.3,
+              width: MediaQuery.of(context).size.width * 0.23,
               decoration: BoxDecoration(
                 color: Theme.of(context).colorScheme.primaryContainer,
                 borderRadius: BorderRadius.circular(30),
@@ -43,7 +43,7 @@ class TargetProgress extends StatelessWidget {
             ),
             Container(
               height: 12,
-              width: (MediaQuery.of(context).size.width * 0.3) * 0.845,
+              width: (MediaQuery.of(context).size.width * 0.23) * 0.845,
               decoration: BoxDecoration(
                 color: Theme.of(context).colorScheme.primary,
                 borderRadius: BorderRadius.circular(30),

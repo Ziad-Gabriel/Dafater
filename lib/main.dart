@@ -11,8 +11,8 @@ void main() async {
   if (Platform.isLinux || Platform.isWindows || Platform.isMacOS) {
     await windowManager.ensureInitialized();
     WindowOptions windowOptions = const WindowOptions(
-      size: Size(1024, 768),
-      minimumSize: Size(900, 760),
+      size: Size(1024, 846),
+      minimumSize: Size(960, 832),
       center: true,
       backgroundColor: Colors.transparent,
       skipTaskbar: false,

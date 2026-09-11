@@ -8,8 +8,9 @@ class DailyPace extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.29,
-      width: MediaQuery.of(context).size.width * 0.32,
+ 
+      width: MediaQuery.of(context).size.width * 0.25,
+      margin: const EdgeInsets.only(bottom: 8),
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.secondaryContainer,
@@ -23,6 +24,8 @@ class DailyPace extends StatelessWidget {
         ],
       ),
       child: Column(
+        spacing: 8,
+        mainAxisSize: MainAxisSize.min,
         children: [
           Row(
             spacing: 6,
@@ -32,8 +35,8 @@ class DailyPace extends StatelessWidget {
               Text('Daily Pace', style: Theme.of(context).textTheme.titleSmall),
             ],
           ),
-          const Expanded(child: TargetProgress()),
-          const Expanded(child: MiniAnalytics())
+          const TargetProgress(),
+          const MiniAnalytics(),
         ],
       ),
     );

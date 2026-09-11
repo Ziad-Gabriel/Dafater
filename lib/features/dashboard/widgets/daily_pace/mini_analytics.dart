@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MiniAnalytics extends StatelessWidget {
-  const new({super.key});
+  const MiniAnalytics({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -9,7 +9,8 @@ class MiniAnalytics extends StatelessWidget {
     const List<String> theData = ['12:30 - 1:30 PM', '\$62.40'];
     const List<String> additional = ['28 transaction', '+8.4% vs last week'];
     return Container(
-      margin: const EdgeInsets.only(top: 8),
+      height: 65,
+      margin: const EdgeInsets.only(top: 4),
       padding: const EdgeInsets.all(4),
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.primaryContainer,
