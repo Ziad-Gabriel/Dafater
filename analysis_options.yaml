@@ -9,3 +9,22 @@ analyzer:
     - windows/**
     - macos/**
     - linux/**
+    
+  errors:
+    prefer_const_constructors: warning # Options: info, warning, error
+    prefer_const_literals_to_create_immutables: warning
+    unnecessary_const: warning
+
+linter:
+  rules:
+    # Highlights widgets/constructors that can be marked as const
+    prefer_const_constructors: true
+    
+    # Highlights const keywords on fields/variables inside const constructors
+    prefer_const_constructors_in_immutables: true
+    
+    # Highlights non-const literals inside const collections
+    prefer_const_literals_to_create_immutables: true
+    
+    # Highlights unnecessary const keywords when inside an existing const context
+    unnecessary_const: true

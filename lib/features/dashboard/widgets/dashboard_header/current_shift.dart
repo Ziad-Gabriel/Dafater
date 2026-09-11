@@ -13,7 +13,7 @@ class _CurrentShiftState extends State<CurrentShift> {
     return Container(
       height: 50,
       width: 200,
-      padding: EdgeInsets.symmetric(horizontal: 8),
+      padding:const EdgeInsets.symmetric(horizontal: 8),
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.primaryContainer,
         borderRadius: BorderRadius.circular(8),
@@ -21,7 +21,7 @@ class _CurrentShiftState extends State<CurrentShift> {
       child: Row(
         spacing: 8,
         children: [
-          AnimatedGreenCircle(),
+         const AnimatedGreenCircle(),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,

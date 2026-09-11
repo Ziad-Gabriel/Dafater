@@ -10,14 +10,14 @@ class MainButton extends StatelessWidget {
 
       height: 50,
       width: 120,
-      padding: EdgeInsets.all(4),
+      padding:const EdgeInsets.all(4),
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.primary,
         boxShadow: [
           BoxShadow(
             color: Theme.of(context).colorScheme.shadow,
             blurRadius: 3,
-            offset: Offset(0, 2),
+            offset:const Offset(0, 2),
           ),
         ],
         borderRadius: BorderRadius.circular(16),

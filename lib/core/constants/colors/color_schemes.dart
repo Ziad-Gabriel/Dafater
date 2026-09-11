@@ -2,7 +2,7 @@ import 'package:dafater/core/constants/colors/const_colors.dart';
 import 'package:flutter/material.dart';
 
 class ColorSchemes {
-  static ColorScheme get light => ColorScheme.light(
+  static ColorScheme get light =>const ColorScheme.light(
     brightness: Brightness.light,
     surface: lightSurfaceColor,
     onSurface: Color(0xFF000000),
@@ -12,7 +12,7 @@ class ColorSchemes {
     secondary: secondaryColor,
     secondaryContainer: lightSecondaryContainerColor,
     tertiary: tertiaryColor,
-    shadow: Color(0xFF282828),
+    shadow: Color.fromARGB(255, 150, 150, 150),
     error: Color(0xFFB00020),
     onError: Color(0xFFFFFFFF),
   );

@@ -15,7 +15,7 @@ class MainSideBar extends StatelessWidget {
     return Container(
       height: double.infinity,
       width: MediaQuery.of(context).size.width * 0.2,
-      padding: EdgeInsets.all(8),
+      padding:const EdgeInsets.all(8),
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.primaryContainer,
       ),

@@ -19,7 +19,7 @@ class SearchField extends StatelessWidget {
           cursorColor: Theme.of(context).colorScheme.primary,
           style: Theme.of(context).textTheme.bodyMedium,
           textAlign: TextAlign.start,
-          textAlignVertical: TextAlignVertical(y: -0.25),
+          textAlignVertical:const TextAlignVertical(y: -0.25),
           maxLines: 1,
           clipBehavior: Clip.none,
           scrollPadding: EdgeInsets.zero,

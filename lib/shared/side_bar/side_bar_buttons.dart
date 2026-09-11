@@ -35,11 +35,11 @@ class SideBarButtons extends StatelessWidget {
         (index) => GestureDetector(
           onTap: () => changeIndex(index),
           child: AnimatedContainer(
-            duration: Duration(milliseconds: 200),
+            duration:const Duration(milliseconds: 200),
             curve: Curves.easeIn,
             height: 50,
             width: double.infinity,
-            padding: EdgeInsets.symmetric(horizontal: 8),
+            padding:const EdgeInsets.symmetric(horizontal: 8),
             margin: EdgeInsets.only(
               top: index == currentIndex ? 0 : 4,
               bottom: index == currentIndex ? 4 : 0,
@@ -55,10 +55,10 @@ class SideBarButtons extends StatelessWidget {
                       : Colors.transparent,
                   blurRadius: 4,
                   spreadRadius: 0,
-                  offset: Offset(0, 2),
+                  offset:const Offset(0, 2),
                 ),
               ],
-              borderRadius: BorderRadius.circular(16),
+              borderRadius: BorderRadius.circular(8),
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -70,13 +70,15 @@ class SideBarButtons extends StatelessWidget {
                       ? Theme.of(context).colorScheme.onPrimary
                       : Theme.of(context).colorScheme.primary,
                 ),
-                SizedBox(width: 6),
-                Text(
-                  buttonLabels[index],
-                  style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                    color: index == currentIndex
-                        ? Theme.of(context).colorScheme.onPrimary
-                        : Theme.of(context).colorScheme.primary,
+                const SizedBox(width: 6),
+                Expanded(
+                  child: Text(
+                    buttonLabels[index],
+                    style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                      color: index == currentIndex
+                          ? Theme.of(context).colorScheme.onPrimary
+                          : Theme.of(context).colorScheme.primary,
+                    ),
                   ),
                 ),
               ],

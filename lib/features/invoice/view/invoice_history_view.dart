@@ -5,12 +5,12 @@ class InvoiceHistoryView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       mainAxisAlignment: MainAxisAlignment.center,
       mainAxisSize: MainAxisSize.max,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        const Text('Invoice History View'),
+         Text('Invoice History View'),
       ],
     );
   }

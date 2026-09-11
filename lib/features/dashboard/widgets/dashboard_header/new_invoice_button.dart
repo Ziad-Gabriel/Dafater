@@ -9,7 +9,7 @@ class NewInvoiceButton extends StatelessWidget {
     return Container(
       height: 50,
       width: 170,
-      padding: EdgeInsets.symmetric(horizontal: 8),
+      padding:const EdgeInsets.symmetric(horizontal: 8),
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.primary,
         borderRadius: BorderRadius.circular(8),
@@ -26,7 +26,7 @@ class NewInvoiceButton extends StatelessWidget {
             style: Theme.of(context).textTheme.bodySmall!
                 .copyWith(color: Theme.of(context).colorScheme.onPrimary),
           ),
-          Spacer(),
+          const Spacer(),
           Container(
             height: 30,
             width: 30,
