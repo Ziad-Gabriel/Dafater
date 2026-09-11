@@ -1,3 +1,5 @@
+import 'package:dafater/features/dashboard/widgets/daily_pace/mini_analytics.dart';
+import 'package:dafater/features/dashboard/widgets/daily_pace/target_progress.dart';
 import 'package:flutter/material.dart';
 
 class DailyPace extends StatelessWidget {
@@ -30,60 +32,8 @@ class DailyPace extends StatelessWidget {
               Text('Daily Pace', style: Theme.of(context).textTheme.titleSmall),
             ],
           ),
-          Expanded(
-            child: Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    Text(
-                      'Target Progress',
-                      style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                        color: Theme.of(context).colorScheme.shadow,
-                      ),
-                    ),
-                    Text('84.5%', style: Theme.of(context).textTheme.bodyLarge),
-                  ],
-                ),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    Text(
-                      '8,450',
-                      style: Theme.of(context).textTheme.titleSmall,
-                    ),
-                    Text(
-                      '/10,000',
-                      style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                        color: Theme.of(context).colorScheme.shadow,
-                      ),
-                    ),
-                  ],
-                ),
-                Stack(
-                  children: [
-                    Container(
-                      height: 12,
-                      width: MediaQuery.of(context).size.width * 0.3,
-                      decoration: BoxDecoration(
-                        color: Theme.of(context).colorScheme.primaryContainer,
-                        borderRadius: BorderRadius.circular(30),
-                      ),
-                    ),
-                    Container(
-                      height: 12,
-                      width: (MediaQuery.of(context).size.width * 0.3) * 0.845,
-                      decoration: BoxDecoration(
-                        color: Theme.of(context).colorScheme.primary,
-                        borderRadius: BorderRadius.circular(30),
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
+          const Expanded(child: TargetProgress()),
+          const Expanded(child: MiniAnalytics())
         ],
       ),
     );

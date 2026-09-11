@@ -12,8 +12,8 @@ class MainLargeContainer extends StatelessWidget {
         borderRadius: BorderRadius.circular(8),
         boxShadow: [
           BoxShadow(
-            color: Theme.of(context).colorScheme.shadow,
-            offset:const Offset(0, 1),
+            color: Theme.of(context).colorScheme.shadow.withAlpha(80),
+            offset: const Offset(0, 0),
             blurRadius: 2,
           ),
         ],
@@ -24,7 +24,9 @@ class MainLargeContainer extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                 color: Theme.of(context).colorScheme.secondaryContainer,
-                borderRadius:const BorderRadius.vertical(top: Radius.circular(8)),
+                borderRadius: const BorderRadius.vertical(
+                  top: Radius.circular(8),
+                ),
               ),
             ),
           ),
@@ -32,7 +34,9 @@ class MainLargeContainer extends StatelessWidget {
             height: 40,
             decoration: BoxDecoration(
               color: Theme.of(context).colorScheme.primaryContainer,
-              borderRadius:const BorderRadius.vertical(bottom: Radius.circular(8)),
+              borderRadius: const BorderRadius.vertical(
+                bottom: Radius.circular(8),
+              ),
             ),
           ),
         ],
