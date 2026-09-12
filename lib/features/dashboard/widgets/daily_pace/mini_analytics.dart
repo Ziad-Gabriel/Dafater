@@ -11,9 +11,10 @@ class MiniAnalytics extends StatelessWidget {
     return Container(
       height: 65,
       margin: const EdgeInsets.only(top: 4),
-      padding: const EdgeInsets.all(4),
+      padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.primaryContainer,
+
         borderRadius: BorderRadius.circular(4),
       ),
       child: Row(

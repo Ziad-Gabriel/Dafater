@@ -12,18 +12,25 @@ class HeaderContainer extends StatelessWidget {
     return Container(
       height: 60,
       width: double.infinity,
-      padding:const EdgeInsets.all(8),
+      padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.secondaryContainer,
         borderRadius: BorderRadius.circular(8),
       ),
-      child:const Row(
+      child: const Row(
         spacing: 8,
         mainAxisSize: MainAxisSize.max,
         children: [
           Expanded(child: SearchField()),
-          CurrentShift(),
-          SelectBranch(),
+          Expanded(
+            child: Row(
+              spacing: 8,
+              children: [
+                Expanded(child: CurrentShift()),
+                Expanded(child: SelectBranch()),
+              ],
+            ),
+          ),
           // NewInvoiceButton(),
         ],
       ),

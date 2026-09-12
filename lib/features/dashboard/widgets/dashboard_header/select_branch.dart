@@ -7,7 +7,7 @@ class SelectBranch extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 50,
-      width: 200,
+  
       padding:const EdgeInsets.symmetric(horizontal: 8),
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.primary,
