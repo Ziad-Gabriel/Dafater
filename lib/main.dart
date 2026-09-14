@@ -11,14 +11,16 @@ void main() async {
   if (Platform.isLinux || Platform.isWindows || Platform.isMacOS) {
     await windowManager.ensureInitialized();
     WindowOptions windowOptions = const WindowOptions(
-      size: Size(1174, 846),
+      size: Size(1154, 832),
       minimumSize: Size(1154, 832),
       center: true,
-      backgroundColor: Colors.transparent,
+      backgroundColor: Colors.white,
       skipTaskbar: false,
       titleBarStyle: TitleBarStyle.normal,
     );
     windowManager.waitUntilReadyToShow(windowOptions, () async {
+      await windowManager.setMinimumSize(const Size(1154, 832));
+      await windowManager.setResizable(true);
       await windowManager.show();
       await windowManager.focus();
     });

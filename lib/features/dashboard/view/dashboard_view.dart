@@ -2,7 +2,6 @@ import 'package:dafater/features/dashboard/widgets/daily_pace/daily_pace.dart';
 import 'package:dafater/features/dashboard/widgets/dashboard_header/header_container.dart';
 import 'package:dafater/features/dashboard/widgets/lowest_product/lowest_product.dart';
 import 'package:dafater/features/dashboard/widgets/recent_invoices/recent_invoices.dart';
-import 'package:dafater/shared/main_large_container/main_large_container.dart';
 import 'package:flutter/material.dart';
 
 class DashboardView extends StatelessWidget {
@@ -10,21 +9,14 @@ class DashboardView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
+    return const Padding(
+      padding: EdgeInsets.all(8.0),
       child: Column(
         spacing: 10,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          const HeaderContainer(),
-          Row(
-            spacing: 8,
-            children: List.generate(
-              3,
-              (index) => const Expanded(child: MainLargeContainer()),
-            ),
-          ),
-          const Expanded(
+          HeaderContainer(),
+          Expanded(
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -40,6 +32,7 @@ class DashboardView extends StatelessWidget {
               ],
             ),
           ),
+          
         ],
       ),
     );

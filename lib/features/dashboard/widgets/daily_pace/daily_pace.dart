@@ -34,7 +34,7 @@ class DailyPace extends StatelessWidget {
             ],
           ),
           const TargetProgress(),
-          const SizedBox(height: 4),
+          const SizedBox(height: 6),
           const MiniAnalytics(),
         ],
       ),

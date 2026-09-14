@@ -54,6 +54,17 @@ static void my_application_activate(GApplication* application) {
 
   gtk_window_set_default_size(window, 1280, 720);
 
+  // Enforce a hard minimum window size at the GTK/window-manager level.
+  // This is a real OS-level constraint (X11/Wayland geometry hints), so the
+  // window manager itself refuses to resize below it — unlike relying only
+  // on the window_manager Dart plugin, which can be dropped or overridden
+  // by other calls (e.g. setResizable) on some window managers.
+  GdkGeometry geometry;
+  geometry.min_width = 1154;
+  geometry.min_height = 832;
+  gtk_window_set_geometry_hints(window, GTK_WIDGET(window), &geometry,
+                                 GDK_HINT_MIN_SIZE);
+
   g_autoptr(FlDartProject) project = fl_dart_project_new();
   fl_dart_project_set_dart_entrypoint_arguments(
       project, self->dart_entrypoint_arguments);

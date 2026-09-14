@@ -6,6 +6,7 @@ class TargetProgress extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      spacing: 4,
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Row(

@@ -19,9 +19,8 @@ class SearchField extends StatelessWidget {
           cursorColor: Theme.of(context).colorScheme.primary,
           style: Theme.of(context).textTheme.bodyMedium,
           textAlign: TextAlign.start,
-          textAlignVertical:const TextAlignVertical(y: -0.25),
+          textAlignVertical: const TextAlignVertical(y: -0.25),
           maxLines: 1,
-          clipBehavior: Clip.none,
           scrollPadding: EdgeInsets.zero,
           decoration: InputDecoration(
             contentPadding: EdgeInsets.zero,
@@ -33,6 +32,7 @@ class SearchField extends StatelessWidget {
             enabledBorder: InputBorder.none,
             focusedBorder: InputBorder.none,
             errorBorder: InputBorder.none,
+            hoverColor: Theme.of(context).colorScheme.tertiary,
           ),
         ),
       ),
