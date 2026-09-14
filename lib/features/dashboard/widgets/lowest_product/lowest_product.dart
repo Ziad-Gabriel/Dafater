@@ -1,3 +1,5 @@
+import 'package:dafater/features/dashboard/widgets/lowest_product/lowest_products_header.dart';
+import 'package:dafater/features/dashboard/widgets/lowest_product/lowest_products_list.dart';
 import 'package:flutter/material.dart';
 
 class LowestProduct extends StatelessWidget {
@@ -16,6 +18,14 @@ class LowestProduct extends StatelessWidget {
             color: Theme.of(context).colorScheme.shadow.withAlpha(80),
             offset: const Offset(0, 0),
             blurRadius: 2,
+          ),
+        ],
+      ),
+      child:const Column(
+        children: [
+          LowestProductsHeader(),
+          Expanded(
+            child: LowestProductsList()
           ),
         ],
       ),

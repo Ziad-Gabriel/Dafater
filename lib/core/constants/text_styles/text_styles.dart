@@ -8,7 +8,7 @@ class TextStyles {
     titleLarge: titleStyle.copyWith(
       fontSize: 28,
       fontWeight: FontWeight.w700,
-      overflow: TextOverflow.ellipsis,
+      overflow: TextOverflow.ellipsis
     ),
     titleMedium: titleStyle.copyWith(
       fontSize: 24,
